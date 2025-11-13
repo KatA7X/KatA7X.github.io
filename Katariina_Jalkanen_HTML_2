@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+ 
+  <title>Her Majesty The Cook — King's Taster Application</title>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    header, nav, section, article, aside, footer { margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; }
+    label { display: block; margin-top: 10px; }
+    input, select, textarea { margin-top: 4px; }
+    blockquote { border-left: 3px solid #ccc; padding-left: 10px; color: #555; }
+    nav a { margin-right: 10px; }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Her Majesty The Cook — Queen's Taster Application</h1>
+    <p>A job application for the bravest of testers.</p>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="#apply">Apply</a>
+      <a href="#positions">Positions</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <section id="apply">
+    <article>
+      <h2>Apply Now</h2>
+
+      <!-- Form -->
+      <form action="/submit" method="POST" autocomplete="on" aria-label="King's Taster Application Form">
+
+        <!-- Text input: full name -->
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="full_name" placeholder="Sir Tastes-a-Lot"
+               required minlength="3" maxlength="60" pattern="^[A-Za-z0-9 '\-\.]+$" aria-required="true">
+
+        <!-- Text input: email -->
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="tastebud@royalmail.king" required>
+
+        <!-- Password -->
+        <label for="password">Create a Password:</label>
+        <input type="password" id="password" name="password" required minlength="8">
+
+        <!-- Number -->
+        <label for="experience">Years of Experience:</label>
+        <input type="number" id="experience" name="years_experience" min="0" max="50">
+
+        <!-- Range -->
+        <label for="salary-range">Expected Royal Stipend (in gold coins):</label>
+        <input type="range" id="salary-range" name="expected_salary" min="0" max="500" step="5">
+
+        <!-- Checkboxes -->
+        <fieldset>
+          <legend>Skills & Preferences</legend>
+          <label><input type="checkbox" name="skill_poison"> Poison detection</label>
+          <label><input type="checkbox" name="skill_local"> Can work locally</label>
+          <label><input type="checkbox" name="skill_fulltime"> Can work full time</label>
+          <label><input type="checkbox" name="skill_smell"> Good smelling skills</label>
+        </fieldset>
+
+        <!-- Radio -->
+        <fieldset>
+          <legend>Job Type</legend>
+          <label><input type="radio" name="job_type" value="Full-Time" required> Full-Time</label>
+          <label><input type="radio" name="job_type" value="Apprentice"> Apprentice</label>
+        </fieldset>
+
+        <!-- Dropdown -->
+        <label for="position">Desired Position:</label>
+        <select id="position" name="position">
+          <option value="King's Taster">Queen's Taster</option>
+          <option value="Court Jester">Court Jester</option>
+          <option value="Wine Cellar Occupant">Wine Cellar Occupant</option>
+          <option value="Alchemist">Alchemist</option>
+        </select>
+
+        <!-- Datalist -->
+        <label for="dept">Preferred Department / Location:</label>
+        <input list="departments" id="dept" name="department" placeholder="Choose or type...">
+        <datalist id="departments">
+          <option value="Castle Kitchen">
+          <option value="Dungeon Brewery">
+          <option value="Royal Gardens">
+        </datalist>
+
+        <!-- Textarea -->
+        <label for="cover">Cover Letter:</label>
+        <textarea id="cover" name="cover_letter" rows="5" cols="40"
+                  placeholder="Describe why you are the bravest taster in the kingdom..."></textarea>
+
+        <!-- Readonly -->
+        <label for="app-id">Application ID (readonly):</label>
+        <input type="text" id="app-id" value="KT-001" readonly>
+
+        <!-- Disabled -->
+        <label for="royal-code">Royal Approval Code (disabled):</label>
+        <input type="text" id="royal-code" placeholder="To be filled by Her Majesty" disabled>
+
+        <!-- Submit -->
+        <input type="submit" value="Send">
+      </form>
+    </article>
+  </section>
+
+  <!-- Aside -->
+  <aside id="positions">
+    <h3>Available Positions</h3>
+    <ul>
+      <li>Queen's Taster</li>
+      <li>Court Jester</li>
+      <li>Wine Cellar Occupant</li>
+      <li>Alchemist</li>
+    </ul>
+
+  </aside>
+
+  <!-- About section -->
+  <section id="about">
+    <article>
+      <h3>About the Kitchen</h3>
+      <p>The royal kitchen, led by Her Majesty The Cook, serves the most daring delicacies.
+         Taste at your own peril and pleasure!</p>
+    </article>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© Her Majesty The Cook — All teaspoons reserved.</p>
+  </footer>
+
+</body>
+</html>
