@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Her Majesty’s Taster Application</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <!-- Title uses ID + class for CSS -->
+    <h1 id="main-title" class="title">Her Majesty’s Official Taster Application</h1>
+
+    <!-- Navigation menu -->
+    <nav class="menu">
+        <a href="#form">Application</a>
+        <a href="#aside">About the Role</a>
+        <a href="#footer">Contact</a>
+    </nav>
+</header>
+
+<section id="form">
+    <article>
+<br>
+        <aside id="aside">
+    <h2>About the Role</h2>
+    <p>You will bravely taste meals before Her Majesty consumes them, ideally without dying.</p>
+</aside>
+<br>
+        <!-- Main Form -->
+        <form action="/submit" method="POST" autocomplete="on" aria-label="Royal Taster Application Form">
+
+            <!-- Name -->
+            <div class="form-section">
+                <label for="fullname">Full Name</label>
+                <input 
+                    type="text" 
+                    id="fullname" 
+                    name="fullname" 
+                    placeholder="Sir/Lady Your Name Here"
+                    required 
+                    minlength="2" 
+                    maxlength="40"
+                    pattern="[A-Za-z\s]+">
+            </div>
+
+            <!-- Email -->
+            <div class="form-section">
+                <label for="email">Email</label>
+                <input 
+                    type="text" 
+                    id="email" 
+                    name="email" 
+                    placeholder="you@castlemail.com"
+                    required 
+                    minlength="5" 
+                    maxlength="50"
+                    pattern=".+@.+\..+">
+            </div>
+
+            <!-- Password -->
+            <div class="form-section">
+                <label for="password">Create Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <!-- Years of Experience -->
+            <div class="form-section">
+                <label for="experience">Years of Experience Detecting Poisons</label>
+                <input type="number" id="experience" name="experience" min="0" max="50">
+            </div>
+
+            <!-- Salary Range -->
+            <div class="form-section">
+                <label for="salary">Expected Salary (Gold Coins)</label>
+                <input type="range" id="salary" name="salary" min="10" max="200" step="10">
+            </div>
+
+            <!-- Checkboxes -->
+            <div class="form-section">
+                <p>Skills & Preferences</p>
+                <label><input type="checkbox" name="skills" value="poison"> Poison Detection</label>
+                <label><input type="checkbox" name="skills" value="local"> Can Work Locally</label>
+                <label><input type="checkbox" name="skills" value="fulltime"> Can Work Full Time</label>
+                <label><input type="checkbox" name="skills" value="smell"> Excellent Smelling Skills</label>
+            </div>
+
+            <!-- Radio Buttons -->
+            <div class="form-section">
+                <p>Preferred Job Type</p>
+                <label><input type="radio" name="jobtype" value="fulltime"> Full-Time</label>
+                <label><input type="radio" name="jobtype" value="apprentice"> Apprentice</label>
+            </div>
+
+            <!-- Dropdown -->
+            <div class="form-section">
+                <label for="position">Desired Position</label>
+                <select id="position" name="position">
+                    <option value="jester">Court Jester</option>
+                    <option value="cellar">Wine Cellar Occupant</option>
+                    <option value="alchemist">Alchemist</option>
+                </select>
+            </div>
+
+            <!-- Datalist -->
+            <div class="form-section">
+                <label for="locations">Preferred Work Location</label>
+                <input list="place-list" id="locations" name="locations" placeholder="Choose or type...">
+                <datalist id="place-list">
+                    <option value="Castle Kitchen">
+                    <option value="Dungeon Brewery">
+                    <option value="Royal Gardens">
+                </datalist>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-section">
+                <label for="cover">Cover Letter</label>
+                <textarea id="cover" name="cover" rows="5" cols="40"
+                    placeholder="Explain why you are unlikely to die from suspicious stew..."></textarea>
+            </div>
+
+            <!-- Disabled field -->
+            <div class="form-section">
+                <label>Royal Clearance</label>
+                <input type="text" value="Pending Approval" disabled>
+            </div>
+
+            <!-- Readonly field -->
+            <div class="form-section">
+                <label>Castle ID</label>
+                <input type="text" value="427" readonly>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-section">
+                <input type="submit" value="Send">
+            </div>
+
+            <!-- Multi-class selector -->
+            <p class="green bold">Peasant food may be fine for peasants, but only the bravest taste buds dare the royal stew!</p>
+
+            <!-- Hidden spoon (visibility: hidden) -->
+            <p class="hidden-spoon">Secret Spoon: Do not show</p>
+
+            <!-- Hidden image for attribute selector -->
+            <img src="winter-banner.jpg" alt="Winter decorative banner">
+               <br>
+        <blockquote>
+            “A noble career is not found, but tasted — preferably before it kills someone.”
+            <em>-The Royal Jester</em>
+        </blockquote>
+        <br>
+        </form>
+    </article>
+</section>
+
+<!-- Embed requirement -->
+<section>
+    <embed src="castle-menu.pdf" width="300" height="200" type="application/pdf">
+</section>
+
+
+<footer id="footer">
+    <p>Contact the Royal Kitchen for more information.</p>
+</footer>
+
+</body>
+</html>

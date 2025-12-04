@@ -1,0 +1,194 @@
+/* ----------------------------------------------------------
+   1. RESET DEFAULTS — Universal Selector
+----------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------------------------
+   2. GLOBAL STYLES & VISUAL RULES
+----------------------------------------------------------- */
+
+body {
+    background-image: linear-gradient(#f4eed9, #ebe2c0);
+    font-family: Georgia, serif;
+    color: #3b2f2f; 
+    padding: 20px; 
+}
+
+header {
+    background-color: rgba(212, 180, 80, 0.3);
+    padding: 12px;
+    border-radius: 10px;
+}
+
+/* ID Selector */
+#main-title {
+    font-size: 2em;
+    color: #7b2e1f;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Type Selectors */
+h1 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #7b2e1f;
+}
+
+p {
+    margin-top: 6px;
+}
+
+/* Chaining selector */
+h1.title {
+    font-style: italic;
+}
+
+/* Multiple selectors */
+h1, h2, .menu {
+    padding-bottom: 5px;
+}
+
+/* ----------------------------------------------------------
+   3. LINKS 
+----------------------------------------------------------- */
+
+nav a {
+    color: #6b3a28;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav a:hover { /* Pseudo-class */
+    color: #a6442e;
+}
+
+nav a:visited {
+    color: #4d2a20;
+}
+
+/* Active link */
+nav a:active {
+    opacity: 0.7;
+}
+
+/* ----------------------------------------------------------
+   4. FORM & INPUT STYLING
+----------------------------------------------------------- */
+
+/* Form wrapper */
+form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px; 
+    max-width: 600px;
+    margin: 0 auto; 
+}
+
+/* Class Selectors */
+.form-section {
+    margin-bottom: 16px;
+    padding: 6px 10px 5px 12px; 
+}
+
+/* Descendant Combinator */
+.form-section label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Attribute Selector */
+input[type*="text"] {
+    border: 1px solid #7f6752;
+    padding: 6px;
+    width: 100%;
+}
+
+
+img[src*="winter"] {
+    visibility: hidden; /* Required visibility example */
+}
+
+/* All inputs */
+input, select, textarea {
+    border-radius: 6px;
+    border: 1px solid #7f6752;
+    padding: 6px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+input[type="range"] {
+    width: 80%;
+}
+
+/* Disabled pseudo-class */
+input:disabled {
+    background-color: #dcdcdc;
+    opacity: 0.6;
+}
+
+/* Focus pseudo-class */
+input:focus, textarea:focus {
+    border: 2px solid #a6442e;
+    outline: none;
+}
+
+/* Radio/Checkbox */
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    margin-right: 4px;
+}
+
+/* ----------------------------------------------------------
+   5. MULTIPLE CLASS SELECTOR 
+----------------------------------------------------------- */
+.green.bold {
+    color: green !important; 
+    font-weight: bold;
+}
+
+/* ----------------------------------------------------------
+   6. BOX MODEL 
+----------------------------------------------------------- */
+
+aside {
+    border: 1px solid #b18c61;
+    padding: 10px;
+    margin: 6px 11px 4px 9px; 
+    max-width: 300px;
+    min-height: 80px;
+    overflow: auto; 
+    border-radius: 8px;
+}
+
+/* Individual margin/padding property*/
+footer {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+/* ----------------------------------------------------------
+   7. PSEUDO-CLASSES 
+----------------------------------------------------------- */
+
+textarea:disabled {
+    background-color: #eee;
+}
+
+/* ----------------------------------------------------------
+   8. VISIBILITY 
+----------------------------------------------------------- */
+.hidden-spoon {
+    visibility: hidden; /* Example: hides humorous “secret spoon” */
+}
